@@ -1,0 +1,22 @@
+<form class="container">
+  <h1 class="text-center">Random Data</h1>
+    
+  <div class="form-group">
+    <label for="id">Id</label>
+    <input type="text" id="id" class="form-control" value="{{ data.id }}">
+  </div>
+  <div class="form-group">
+    <label for="joke">Joke</label>
+    <input type="text" id="joke" class="form-control" value="{{ data.value }}">
+  </div>
+  <div class="form-group">
+    <label for="created_at">Created at</label>
+    <input type="text" id="created_at" class="form-control" value="{{ data.created_at | date }}">
+  </div>
+  <div class="form-group">
+    <label for="categories">Categories</label>
+    <input type="text" id="categories" class="form-control" value="{{ data.categories }}">
+  </div>
+    
+  <img src="{{ data.icon_url}}" onerror="this.style.display='none'" class="img-circle" alt="{{ data.id }}">
+</form>
